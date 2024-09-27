@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator</title>
+
+    <!-- Favicons -->
+    <link href="./assets/images/fav-icon/favicon.ico" rel="icon" />
+
+    <!-- Bootstrap CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-5/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icon CSS File -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme/theme.css" />
+  </head>
+  <body>
+    <!-- Grading Tabel Starts Here -->
+    <section>
+      <div class="container">
+        <div class="py-5">
+          <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12 mb-3">
+              <div class="card bg-white shadow border-0">
+                <div class="gpa-calculator__container">
+                  <div class="gpa-calculator__wrapper">
+                    <ul class="gpa-calculator__main-ul">
+                      <li class="gpa-calculator__main-li semester-1">
+                        <div class="gpa-calculator__heading">
+                          <p class="gpa-calculator__header-text">Semester 1</p>
+                          <button
+                            type="button"
+                            class="gpa-calculator__remove-all delete-1"
+                          >
+                            <i class="bi bi-x"></i>
+                          </button>
+                        </div>
+                        <ul class="gpa-calculator__course-ul">
+                          <li class="gpa-calculator__course-li course-1">
+                            <input
+                              type="text"
+                              name="course-name"
+                              value=""
+                              id="course-name"
+                              class="gpa-calculator__course-name gpa-calculator__input"
+                              placeholder="Subject  Name"
+                            />
+                            <select
+                              class="gpa-calculator__grate grades-1"
+                              name="grade"
+                              id="grade"
+                            >
+                              <option value="grade">Grade</option>
+                              <option value="4.0">A+</option>
+                              <option value="3.75">A</option>
+                              <option value="3.50">A-</option>
+                              <option value="3.25">B+</option>
+                              <option value="3.0">B</option>
+                              <option value="2.75">B-</option>
+                              <option value="2.50">C+</option>
+                              <option value="2.25">C</option>
+                              <option value="2.0">D</option>
+                              <option value="0.0">F</option>
+                            </select>
+                            <input
+                              type="number"
+                              name="credits"
+                              step="1"
+                              min="0"
+                              max="5"
+                              id="credits"
+                              value=""
+                              class="gpa-calculator__credits credits-1 gpa-calculator__input"
+                              placeholder="Credits"
+                              disabled="disabled"
+                              style="cursor: not-allowed"
+                            />
+                            <button
+                              class="gpa-calculator__remove-item courses-1"
+                            >
+                              <i class="bi bi-x"></i>
+                            </button>
+                          </li>
+                        </ul>
+                        <div class="gpa-calculator__add-course-semester">
+                          <div class="gpa-calculator__semester-result">
+                            <span>Semester 1 GPA: </span>
+                            <span class="gpa-calculator__semester-cgpa"
+                              >0.00</span
+                            >
+                          </div>
+                          <div class="gpa-calculator__add-course">
+                            <button
+                              class="gpa-calculator__add-course__button"
+                              id="add-course-1"
+                            >
+                              Add Subject
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="gpa-calculator__add-semester">
+                      <button class="gpa-calculator__add-semester__button">
+                        Add Semester
+                      </button>
+                      <div class="gpa-calculator__semester-result">
+                        <span>Your CGPA:</span>
+                        <span
+                          class="cgpa-calculator__result"
+                          style="color: rgb(87, 87, 87)"
+                          >0.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mb-3">
+              <div class="card bg-white border-0 shadow-sm mb-3">
+                <div class="p-3">
+                  <h4 class="text-center fw-bold mb-3">
+                    CGPA Grading System Tabel
+                  </h4>
+                  <div class="table-responsive">
+                    <table
+                      class="table table-bordered table-striped table-hover"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col">Numbers</th>
+                          <th scope="col">Grade</th>
+                          <th scope="col">Point</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>80% and above</td>
+                          <td>A+</td>
+                          <td>4.00</td>
+                        </tr>
+                        <tr>
+                          <td>75% to less than 80%</td>
+                          <td>A</td>
+                          <td>3.75</td>
+                        </tr>
+                        <tr>
+                          <td>70% to less than 75%</td>
+                          <td>A-</td>
+                          <td>3.50</td>
+                        </tr>
+                        <tr>
+                          <td>65% to less than 70%</td>
+                          <td>B+</td>
+                          <td>3.25</td>
+                        </tr>
+                        <tr>
+                          <td>60% to less than 65%</td>
+                          <td>B</td>
+                          <td>3.00</td>
+                        </tr>
+                        <tr>
+                          <td>55% to less than 60%</td>
+                          <td>B-</td>
+                          <td>2.75</td>
+                        </tr>
+                        <tr>
+                          <td>50% to less than 55%</td>
+                          <td>C+</td>
+                          <td>2.50</td>
+                        </tr>
+                        <tr>
+                          <td>45% to less than 50%</td>
+                          <td>C</td>
+                          <td>2.25</td>
+                        </tr>
+                        <tr>
+                          <td>40% to less than 45%</td>
+                          <td>D</td>
+                          <td>2.00</td>
+                        </tr>
+                        <tr>
+                          <td>Less than 40%</td>
+                          <td>F</td>
+                          <td>0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="sticky-bottom card bg-white border-0 shadow-sm">
+                <div class="p-3">
+                  <p class="mb-0">
+                    Total Completed Semester: <span id="total_semester">2</span>
+                  </p>
+                  <p class="mb-0">
+                    Total Completed Credits:
+                    <span id="total_completed_credits">21</span>
+                  </p>
+                  <p class="mb-0">
+                    Total CGPA: <span id="total_cgpa">3.39</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Grading Tabel Ends Here -->
+
+    <!-- jQuery JS File -->
+    <script src="./assets/js/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap JS File -->
+    <script src="./assets/js/bootstrap-5/js/bootstrap.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --bg-color: #efefef;
+  --text-color: #000000;
+  --btn-bg-color: #4d1d45;
+  --btn-border-color: #7b3d70;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  text-align: center;
+}
+
+.theme-btn {
+  border: 1px solid var(--btn-border-color) !important;
+  color: var(--text-color);
+}
+
+.theme-btn:hover,
+.theme-btn:active {
+  background: var(--btn-bg-color) !important;
+  border: 1px solid var(--btn-border-color) !important;
+  color: var(--bg-color);
+}
+
+.gpa-calculator__container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gpa-calculator__container .gpa-calculator__wrapper {
+  padding: 10px;
+  box-shadow: 0 0.25em 1em rgba(7, 29, 63, 0.125);
+}
+
+.gpa-calculator__container .gpa-calculator__main-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.gpa-calculator__container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gpa-calculator__container .gpa-calculator__main-li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+  list-style-type: none !important;
+}
+
+.entry-content ul > li {
+  list-style-type: square;
+  padding-top: 5px;
+}
+
+.gpa-calculator__container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+.gpa-calculator__container .gpa-calculator__heading {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gpa-calculator__container .gpa-calculator__header-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4a4a4acc;
+}
+
+.gpa-calculator__container .gpa-calculator__remove-all {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 1px solid var(--btn-border-color);
+  border-radius: 50%;
+  color: var(--btn-bg-color);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.gpa-calculator__container .gpa-calculator__remove-all:hover {
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+}
+
+.gpa-calculator__container .gpa-calculator__course-ul {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+.entry-content ol ol,
+.entry-content ul ul {
+  margin-bottom: 0;
+}
+.gpa-calculator__container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.entry-content ol,
+.entry-content ul {
+  margin-bottom: 28px;
+  margin-left: 40px;
+}
+
+.gpa-calculator__container .gpa-calculator__course-li {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+.entry-content ul > li {
+  list-style-type: square;
+  padding-top: 5px;
+}
+
+.gpa-calculator__container
+  .gpa-calculator__course-li:first-child
+  .gpa-calculator__course-name {
+  border-top: 1px solid #e0e2e6 !important;
+  border-top-left-radius: 5px !important;
+}
+.gpa-calculator__container .gpa-calculator__course-name {
+  flex: 0 1 350px;
+}
+.gpa-calculator__container .gpa-calculator__input {
+  height: 50px;
+  flex: 0 1 auto;
+  margin: 0;
+  padding: 5px 10px;
+  outline: 0;
+  color: #575757 !important;
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #e0e2e6 !important;
+  border-left: 1px solid #e0e2e6 !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.gpa-calculator__container
+  .gpa-calculator__course-li:first-child
+  .gpa-calculator__grate {
+  border-top: 1px solid #e0e2e6;
+}
+.gpa-calculator__container .gpa-calculator__grate {
+  height: 50px;
+  flex: 0 0 calc(33.33333% - 5rem);
+  width: calc(33.33333% - 5rem);
+  max-width: calc(33.33333% - 5rem);
+  margin: 0;
+  padding: 5px 10px;
+  outline: 0;
+  color: #848d9c !important;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: transparent !important;
+  border: none;
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: #e0e2e6 !important;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPkFydGJvYXJkIDM8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iQXJ0Ym9hcmQtMyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8cG9seWxpbmUgaWQ9IlBhdGgtMi1Db3B5LTIiIHN0cm9rZT0iIzg0OEQ5QyIgcG9pbnRzPSIxIDEgNSA1IDkgMSI+PC9wb2x5bGluZT4gICAgPC9nPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+}
+
+.gpa-calculator__container
+  .gpa-calculator__course-li:first-child
+  .gpa-calculator__credits {
+  border-top: 1px solid #e0e2e6 !important;
+  border-top-right-radius: 5px !important;
+}
+
+.gpa-calculator__container .gpa-calculator__remove-item {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  outline: 0;
+  border: 1px solid var(--btn-border-color);
+  border-radius: 50%;
+  color: var(--btn-bg-color);
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.gpa-calculator__container .gpa-calculator__remove-item:hover {
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+}
+
+.gpa-calculator__container .gpa-calculator__credits {
+  width: 100%;
+}
+
+.gpa-calculator__container .gpa-calculator__credits {
+  border-right: 1px solid #e0e2e6 !important;
+  -moz-appearance: textfield !important;
+}
+
+.gpa-calculator__container .gpa-calculator__add-course-semester {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.gpa-calculator__container .gpa-calculator__semester-result {
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+}
+
+.gpa-calculator__container .gpa-calculator__semester-result > span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #575757;
+}
+
+.gpa-calculator__container .gpa-calculator__semester-result > span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #575757;
+}
+
+.gpa-calculator__container .gpa-calculator__semester-cgpa {
+  font-weight: 700 !important;
+  color: #3a3a3a;
+}
+
+.gpa-calculator__container .gpa-calculator__add-course__button {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 5px 15px;
+  background: transparent;
+  color: var(--btn-bg-color);
+  border: 1px solid var(--btn-border-color);
+  border-radius: 50px !important;
+  /* margin-top: 10px;
+  margin-bottom: 10px; */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.gpa-calculator__container .gpa-calculator__add-course__button:hover {
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+  border: 1px solid var(--btn-border-color);
+}
+
+.gpa-calculator__container .gpa-calculator__main-li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 10px;
+  list-style-type: none !important;
+}
+
+.gpa-calculator__container .gpa-calculator__add-semester {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.gpa-calculator__container .gpa-calculator__add-semester__button {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 5px 15px;
+  background: transparent;
+  color: var(--btn-bg-color);
+  border: 1px solid var(--btn-border-color);
+  border-radius: 50px !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.gpa-calculator__container .gpa-calculator__add-semester__button:hover {
+  background: var(--btn-bg-color);
+  color: var(--bg-color);
+}
+
+.gpa-calculator__container .gpa-calculator__semester-result > span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #575757;
+}
+
+.gpa-calculator__container .gpa-calculator__semester-result > span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #575757;
+}
+
+.cgpa-calculator__result {
+  font-weight: 700 !important;
+}
