@@ -3,10 +3,8 @@ $(document).ready(function () {
 
   // Function to initialize default semester and courses
   function initializeDefaults() {
-    // Initialize the first semester
-    if ($(".gpa-calculator__main-li.semester-1").length) {
-      semesterCount = 1; // Reset to 1 if semester-1 exists
-    }
+    // Count the existing semesters and set semesterCount accordingly
+    semesterCount = $(".gpa-calculator__main-li").length + 1; // Increment by 1 for the next new semester
   }
 
   // Call the function to initialize the default values
@@ -77,6 +75,9 @@ $(document).ready(function () {
     if ($(".gpa-calculator__main-li").length === 0) {
       // Reset the semester count if no semesters are left
       semesterCount = 1;
+    } else {
+      // Update the semesterCount based on remaining semesters
+      semesterCount = $(".gpa-calculator__main-li").length + 1;
     }
   });
 
@@ -123,5 +124,24 @@ $(document).ready(function () {
   $(document).on("click", ".gpa-calculator__remove-item", function (e) {
     e.preventDefault();
     $(this).closest(".gpa-calculator__course-li").remove();
+  });
+
+  // Handle change event on the grade select
+  $(document).on("change", ".gpa-calculator__grate", function () {
+    const creditsInput = $(this)
+      .closest(".gpa-calculator__course-li")
+      .find(".gpa-calculator__credits");
+
+    if ($(this).val() !== "grade") {
+      // Disable the credits input and set cursor style
+      creditsInput
+        .prop("disabled", false)
+        .css("cursor", "allowed")
+        .removeAttr("style");
+    } else {
+      // Disable the credits input and set cursor style to not-allowed
+      creditsInput.prop("disabled", true).css("cursor", "not-allowed");
+      creditsInput.attr("style", "cursor: not-allowed;"); // Ensuring style remains
+    }
   });
 });

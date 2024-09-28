@@ -335,3 +335,68 @@ li {
 .cgpa-calculator__result {
   font-weight: 700 !important;
 }
+
+@media screen and (max-width: 669px) {
+  td {
+    vertical-align: middle;
+  }
+
+  .gpa-calculator__container .gpa-calculator__course-name {
+    flex: 0 1 calc(100% - 3rem) !important;
+    width: calc(100% - 3rem);
+    max-width: calc(100% - 3rem);
+    border-right: 1px solid #e0e2e6 !important;
+    border-bottom: 1px solid #e0e2e6 !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-top: 1px solid #e0e2e6 !important;
+  }
+
+  .gpa-calculator__container
+    .gpa-calculator__course-li:first-child
+    .gpa-calculator__course-name {
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 5px !important;
+    border-bottom: 0 !important;
+  }
+
+  .gpa-calculator__container .gpa-calculator__grate {
+    flex: 0 0 calc(50% - 2rem);
+    width: calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+    border-bottom-left-radius: 5px !important;
+  }
+
+  .gpa-calculator__container .gpa-calculator__course-li {
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  .gpa-calculator__container .gpa-calculator__credits {
+    flex: 0 0 calc(50% - 1rem) !important;
+    width: calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 5px !important;
+  }
+
+  .gpa-calculator__container .gpa-calculator__remove-item {
+    margin-top: -50px;
+    margin-left: 10px;
+  }
+
+  .gpa-calculator__add-course-semester {
+    flex-direction: column;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+
+  .gpa-calculator__container .gpa-calculator__remove-all {
+    margin-right: 12px;
+  }
+
+  .gpa-calculator__add-semester {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

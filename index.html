@@ -30,7 +30,7 @@
         <div class="py-5">
           <div class="row">
             <div class="col-lg-8 col-md-12 col-sm-12 mb-3">
-              <div class="card bg-white shadow border-0">
+              <div class="card bg-white shadow-sm border-0">
                 <div class="gpa-calculator__container">
                   <div class="gpa-calculator__wrapper">
                     <ul class="gpa-calculator__main-ul">
@@ -52,7 +52,7 @@
                               value=""
                               id="course-name"
                               class="gpa-calculator__course-name gpa-calculator__input"
-                              placeholder="Subject  Name"
+                              placeholder="Subject Name"
                             />
                             <select
                               class="gpa-calculator__grate grades-1"
@@ -116,7 +116,7 @@
                       <div class="gpa-calculator__semester-result">
                         <span>Your CGPA:</span>
                         <span
-                          class="cgpa-calculator__result"
+                          class="cgpa-calculator__result total_cgpa"
                           style="color: rgb(87, 87, 87)"
                           >0.00</span
                         >
@@ -202,14 +202,14 @@
               <div class="sticky-bottom card bg-white border-0 shadow-sm">
                 <div class="p-3">
                   <p class="mb-0">
-                    Total Completed Semester: <span id="total_semester">2</span>
+                    Total Completed Semester: <span id="total_semester"></span>
                   </p>
                   <p class="mb-0">
                     Total Completed Credits:
-                    <span id="total_completed_credits">21</span>
+                    <span id="total_completed_credits"></span>
                   </p>
                   <p class="mb-0">
-                    Total CGPA: <span id="total_cgpa">3.39</span>
+                    Total CGPA: <span class="total_cgpa"></span>
                   </p>
                 </div>
               </div>
@@ -228,5 +228,8 @@
 
     <!-- Theme JS -->
     <script src="./assets/js/theme/theme.js"></script>
+
+    <!-- CGPA Calculation -->
+    <script src="./assets/js/theme/calculate-cgpa.js"></script>
   </body>
 </html>
